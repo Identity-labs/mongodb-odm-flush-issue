@@ -56,10 +56,15 @@ $newDocument = new \Document\Foo();
 $newDocument->setFooId($fooId);
 $newDocument->setValue('Hello MongoOdm');
 
+$newDocument2 = new \Document\Foo();
+$newDocument2->setFooId($fooId+1);
+$newDocument2->setValue('Hello MongoOdm Next');
+
 // Upsert
 try{
     $dm->persist($newDocument);
-    $dm->flush(null, array('continueOnError' => true, 'ordered' => false));
+    $dm->persist($newDocument2);
+    $dm->flush(null, array('continueOnError' => true /*, 'ordered' => false*/));
     $dm->clear();
 }catch (\Exception $e){
     echo $e->getMessage() . PHP_EOL . $e->getMessage() . PHP_EOL;
