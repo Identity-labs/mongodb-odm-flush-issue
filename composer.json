@@ -1,0 +1,25 @@
+{
+    "name": "Identity-labs/mongodb-odm-flush-issue",
+    "description": "PRoject debug for flush mongodn-odm issue",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "mongodb-odm",
+        "flush-issue"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*",
+        "mongodb/mongodb": "1.0.x",
+        "alcaeus/mongo-php-adapter": "1.0.x",
+        "doctrine/doctrine-mongo-odm-module": "dev-master"
+    },
+    "require-dev" : {},
+    "config": {},
+    "repositories" : [],
+    "extra": {},
+    "provide": {
+        "ext-mongo": "*",
+        "ext-mongodb": "*"
+    }
+}
